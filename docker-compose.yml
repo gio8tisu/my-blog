@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  strapi:
+    image: node:16
+    working_dir: /app/backend
+    user: node
+    expose:
+      - 1337
+    ports:
+      - 1337:1337
+    command: yarn develop
+    volumes:
+      - ./backend:/app
+
+  blog:
+    image: node:16
+    working_dir: /app/frontend
+    user: node
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    command: npm start
+    environment:
+      REACT_APP_BACKEND_URL: http://localhost:1337
+    volumes:
+      - ./frontend:/app/frontend
