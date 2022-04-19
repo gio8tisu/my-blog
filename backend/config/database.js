@@ -1,11 +1,13 @@
-const path = require('path');
-
 module.exports = ({ env }) => ({
   connection: {
-    client: 'sqlite',
+    client: 'mysql',
     connection: {
-      filename: path.join(__dirname, '..', env('DATABASE_FILENAME', '.tmp/data.db')),
-    },
-    useNullAsDefault: true,
-  },
+      host: env('DATABASE_HOST'),
+      port: env('DATABASE_PORT'),
+      database: env('DATABASE_DATABASE'),
+      user: env('DATABASE_USER'),
+      password: env('DATABASE_PASSWORD'),
+      ssl: "Amazon RDS",
+    }
+  }
 });
