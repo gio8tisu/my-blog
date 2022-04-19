@@ -15,7 +15,7 @@ const Nav = () => {
                 <div className="uk-navbar-left">
                   <ul className="uk-navbar-nav">
                     <li>
-                      <Link to="/">Strapi Blog</Link>
+                      <Link to="/">Sergio G. Campderrich</Link>
                     </li>
                   </ul>
                 </div>
