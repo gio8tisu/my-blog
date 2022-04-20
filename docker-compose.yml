@@ -3,19 +3,27 @@ version: "3"
 services:
   strapi:
     image: node:16
-    working_dir: /app/backend
+    working_dir: /usr/app
     user: node
     expose:
       - 1337
     ports:
       - 1337:1337
     command: yarn develop
+    environment:
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_DATABASE: postgres
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: my-secret-pw
     volumes:
-      - ./backend:/app
+      - ./backend:/usr/app
+    depends_on:
+      - db
 
   blog:
     image: node:16
-    working_dir: /app/frontend
+    working_dir: /usr/app
     user: node
     expose:
       - 3000
@@ -25,4 +33,18 @@ services:
     environment:
       REACT_APP_BACKEND_URL: http://localhost:1337
     volumes:
-      - ./frontend:/app/frontend
+      - ./frontend:/usr/app
+    depends_on:
+      - strapi
+
+  db:
+    image: postgres:14.2
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: my-secret-pw
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:

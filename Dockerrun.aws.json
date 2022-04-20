@@ -1,9 +1,0 @@
-{
-  "AWSEBDockerrunVersion": "1",
-  "Image": {
-    "Name": "gio8tisu/strapi-blog:latest"
-  },
-  "Ports": [
-    {"ContainerPort": "1337"}
-  ]
-}
