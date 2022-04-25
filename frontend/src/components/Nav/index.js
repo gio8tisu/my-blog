@@ -9,20 +9,22 @@ const Nav = () => {
     <div>
       <Query query={CATEGORIES_QUERY} id={null}>
         {({ data: { categories } }) => {
+          console.log(categories);
           return (
             <div>
               <nav className="uk-navbar-container" data-uk-navbar>
                 <div className="uk-navbar-left">
                   <ul className="uk-navbar-nav">
                     <li>
-                      <Link to="/">Sergio G. Campderrich</Link>
+                      <Link to="/">Home</Link>
                     </li>
                   </ul>
                 </div>
 
                 <div className="uk-navbar-right">
+                  Categories:
                   <ul className="uk-navbar-nav">
-                    {categories.data.map((category) => {
+                    {categories.data.filter((category) => category.attributes.articles.data.length > 0).map((category) => {
                       return (
                         <li key={category.attributes.slug}>
                           <Link

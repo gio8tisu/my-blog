@@ -7,6 +7,11 @@ const CATEGORIES_QUERY = gql`
         attributes {
           slug
           name
+	  articles {
+	    data {
+	      id
+	    }
+	  }
         }
       }
     }
