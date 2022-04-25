@@ -6,7 +6,7 @@ const Query = ({ children, query, slug }) => {
     variables: { slug: slug }
   });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <div className="uk-margin-small-right" uk-spinner="ratio: 3"></div>;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
   return children({ data });
 };
