@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import Query from "../../components/Query";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
+import remarkGfm from 'remark-gfm'
 
 import ARTICLE_QUERY from "../../queries/article/article";
 
@@ -38,7 +39,7 @@ const Article = () => {
                       {articles.data[0].attributes.published_at}
                     </Moment>
                   </p>
-                  <ReactMarkdown>
+                  <ReactMarkdown remarkPlugins={[[remarkGfm, {singleTilde: false}]]}>
                     {articles.data[0].attributes.content}
                   </ReactMarkdown>
                 </div>
