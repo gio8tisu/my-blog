@@ -3,6 +3,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
 import Articles from "../Articles";
 import Article from "../Article";
 import Category from "../Category";
@@ -16,6 +17,7 @@ function App() {
         <Route path="/article/:slug" element={<Article />} exact />
         <Route path="/category/:slug" element={<Category />} exact />
       </Routes>
+      <Footer />
     </div>
   );
 }
