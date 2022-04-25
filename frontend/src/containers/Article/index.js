@@ -35,7 +35,7 @@ const Article = () => {
 
               <div className="uk-section">
                 <div className="uk-container uk-container-small">
-                  <p>
+                  <p className="uk-text-meta">
                     <Moment format="MMM Do YYYY">
                       {articles.data[0].attributes.published_at}
                     </Moment>
