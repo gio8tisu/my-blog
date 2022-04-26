@@ -9,20 +9,21 @@ const Nav = () => {
     <div>
       <Query query={CATEGORIES_QUERY} id={null}>
         {({ data: { categories } }) => {
-          console.log(categories);
           return (
-            <div>
+            <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
               <nav className="uk-navbar-container" data-uk-navbar>
                 <div className="uk-navbar-left">
                   <ul className="uk-navbar-nav">
                     <li>
-                      <Link to="/">Home</Link>
+                      <Link to="/">Blog</Link>
                     </li>
                   </ul>
                 </div>
 
                 <div className="uk-navbar-right">
-                  Categories:
+                  <div className="uk-navbar-item uk-text-bold">
+                    BLOG CATEGORIES:
+                  </div>
                   <ul className="uk-navbar-nav">
                     {categories.data.filter((category) => category.attributes.articles.data.length > 0).map((category) => {
                       return (
