@@ -6,7 +6,7 @@ import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import Articles from "../Articles";
 import Article from "../Article";
-import Writer from "../Writer";
+import Me from "../Me";
 import Category from "../Category";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Articles />} exact />
         <Route path="/article/:slug" element={<Article />} exact />
         <Route path="/category/:slug" element={<Category />} exact />
-        <Route path="/writer/:slug" element={<Writer />} exact />
+        <Route path="/me" element={<Me />} exact />
       </Routes>
       <Footer />
     </div>

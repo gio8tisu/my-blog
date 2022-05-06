@@ -1,16 +1,13 @@
 import React from "react";
-import { useParams } from "react-router";
 import Query from "../../components/Query";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 
 import WRITER_QUERY from "../../queries/writer/writer";
 
-const Writer = () => {
-  let { slug } = useParams();
-
+const Me = () => {
   return (
-    <Query query={WRITER_QUERY} slug={slug}>
+    <Query query={WRITER_QUERY} slug="sergio-g-campderrich">
       {({ data: { writers } }) => {
         if (writers.data.length) {
           const { picture } = writers.data[0].attributes;
@@ -47,4 +44,4 @@ const Writer = () => {
   );
 };
 
-export default Writer;
+export default Me;

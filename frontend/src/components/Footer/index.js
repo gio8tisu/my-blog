@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <ul>
         <li>
-          <Link to={'/writer/sergio-g-campderrich'} className="uk-link-reset">
+          <Link to="/me">
             Sergio Garcia Campderrich
           </Link>
         </li>
