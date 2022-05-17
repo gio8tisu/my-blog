@@ -7,8 +7,18 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'yourBucketName.s3.yourRegion.amazonaws.com'],
-          'media-src': ["'self'", 'data:', 'blob:', 'yourBucketName.s3.yourRegion.amazonaws.com'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'strapi-campderrich-media.s3.eu-west-3.amazonaws.com',
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'strapi-campderrich-media.s3.eu-west-3.amazonaws.com',
+          ],
           upgradeInsecureRequests: null,
         },
       },
