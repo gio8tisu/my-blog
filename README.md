@@ -11,4 +11,5 @@
     - nvim
     - tmux
     - dotfiles
-    - zsh + prezto
+    - ~zsh + prezto~
+    - Why bash instead of zsh
