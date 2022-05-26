@@ -5,6 +5,7 @@
 * Music setup with raspberry
 * Recipes
     - Pasta
+    - Quiche
 * Vacarisses
 * L'Escala
 * Dev environment:
