@@ -59,9 +59,13 @@ footer li {
     list-style-type: none;
 }
 footer a {
-  color: inherit;
+    color: inherit;
 }
 footer a:hover {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
+}
+
+#about-me {
+    font-size: 20px;
 }

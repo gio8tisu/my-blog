@@ -30,7 +30,7 @@ const Me = () => {
               >
               </div>
               <div className="uk-section">
-                <div className="uk-container uk-container-small">
+                <div className="uk-container uk-container-small" id="about-me">
                   <ReactMarkdown remarkPlugins={[[remarkGfm, {singleTilde: false}]]}>
                     {writers.data[0].attributes.about}
                   </ReactMarkdown>
