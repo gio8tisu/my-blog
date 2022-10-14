@@ -6,4 +6,5 @@ RUN yarn install
 ADD . /app/
 RUN yarn build
 
+EXPOSE 1337
 CMD ["yarn", "start"]

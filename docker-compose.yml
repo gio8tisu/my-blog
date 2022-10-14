@@ -5,8 +5,6 @@ services:
     image: node:16
     working_dir: /usr/app
     user: node
-    expose:
-      - 1337
     ports:
       - 1337:1337
     command: yarn develop
