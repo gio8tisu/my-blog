@@ -1,6 +1,7 @@
 # Post ideas
 * Python new generation dependency management
 * Hassio
+    - Thermostat
 * Music setup with raspberry
 * Recipes
     - Arroz
