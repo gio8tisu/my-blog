@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eacb6a6d-a885-48a3-905a-c69b645a9575/deploy-status)](https://app.netlify.com/sites/teal-lokum-497060/deploys)
+
 # Post ideas
 * Python new generation dependency management
 * Hassio
