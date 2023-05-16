@@ -1,24 +1,6 @@
 version: "3"
 
 services:
-  strapi:
-    image: node:16
-    working_dir: /usr/app
-    user: node
-    ports:
-      - 1337:1337
-    command: yarn develop
-    environment:
-      DATABASE_HOST: db
-      DATABASE_PORT: 5432
-      DATABASE_DATABASE: postgres
-      DATABASE_USER: postgres
-      DATABASE_PASSWORD: my-secret-pw
-    volumes:
-      - ./backend:/usr/app
-    depends_on:
-      - db
-
   blog:
     image: node:16
     working_dir: /usr/app
