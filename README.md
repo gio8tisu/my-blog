@@ -17,7 +17,8 @@
     - kitty
     - i3
     - dotfiles
-    - Why bash instead of zsh
+    - bash
+* Check https://carloscuesta.me for inspiration
 
 # Project Structure
 
