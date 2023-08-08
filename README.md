@@ -1,26 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/eacb6a6d-a885-48a3-905a-c69b645a9575/deploy-status)](https://app.netlify.com/sites/teal-lokum-497060/deploys)
 
-# Post ideas
-* Python new generation dependency management
-* Hassio
-    - Thermostat
-* Music setup with raspberry
-* Recipes
-    - Arroz
-    - Pasta
-    - Quiche
-    - Ensalada garbanos y salsa tahini
-* Vacarisses
-* L'Escala
-* Dev environment:
-    - nvim
-    - kitty
-    - i3
-    - dotfiles
-    - bash
-* Check https://carloscuesta.me for inspiration
-
-# Project Structure
+# Development
+## Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
